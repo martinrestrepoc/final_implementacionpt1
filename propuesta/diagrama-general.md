@@ -71,30 +71,30 @@ flowchart LR
 
   APO --> GW
   OPE --> GW
-  GW -->|"apostar y<br/>consultar saldo"| APU
+  GW -->|"apostar y ver saldo"| APU
   GW -->|"carreras y medianos"| CAR
   GW -->|"registro y sesion"| USU
   GW -->|"reportes premium"| EST
   GW -->|"consulta del auditor"| AUD
 
-  APU -->|"apuesta + descuento + movimiento,<br/>todo junto o nada"| BDA
+  APU -->|"todo junto o nada"| BDA
   USU --> BDC
   CAR --> BDC
 
-  APU <-.->|"publica ApuestaAceptada y los movimientos<br/>recibe CarreraAbierta con la hora de cierre"| KAF
-  CAR <-.->|"publica los eventos de carrera y el resultado<br/>recibe LiquidacionFinalizada"| KAF
+  APU <-.->|"publica ApuestaAceptada<br/>recibe la hora de cierre"| KAF
+  CAR <-.->|"publica los eventos de carrera<br/>recibe LiquidacionFinalizada"| KAF
   USU -.->|"eventos de usuario"| KAF
   APU ==>|"LiquidarLote"| RAB
 
   KAF -.->|"ResultadoPublicado"| PRE
-  KAF <-.->|"lee las apuestas,<br/>publica las cuotas"| CUO
+  KAF <-.->|"lee apuestas,<br/>publica cuotas"| CUO
   KAF -.-> NOT
   KAF -.->|"todos los eventos"| EST
   KAF -.->|"todos los eventos"| AUD
-  KAF -.->|"cuotas y estado<br/>de la carrera"| GW
+  KAF -.->|"cuotas y estado"| GW
   KAF -.->|"copia continua"| HIS
-  RAB ==>|"lotes repartidos entre<br/>los procesos libres"| PRE
-  NOT <==>|"EnviarNotificacion<br/>una cola por canal, con reintentos"| RAB
+  RAB ==>|"reparte los lotes"| PRE
+  NOT <==>|"EnviarNotificacion<br/>una cola por canal"| RAB
 
   EST --> HIS
   AUD --> REG

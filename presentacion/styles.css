@@ -54,3 +54,7 @@
 .slide-14 table{font-size:23px}
 .slide-14 td{padding:15px 20px 15px 0}
 @media(max-width:700px){.adr p{font-size:20px}.adr .adr-decisión p{font-size:26px}.slide-14 table{font-size:15px}}
+.broker-foot{display:flex;align-items:center;justify-content:space-between;gap:24px}
+.broker-foot p{margin:0}
+.broker-foot .mermaid-link{font-size:19px;flex:none}
+@media(max-width:700px){.broker-foot{flex-direction:column;align-items:flex-start;gap:12px}}

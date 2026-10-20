@@ -137,7 +137,7 @@ document.querySelectorAll('[data-diagram]').forEach(button=>button.addEventListe
   document.querySelector('#viewer-error').hidden=true;
   diagramImage.hidden=true;
   viewer.showModal();
-  diagramImage.onload=()=>{diagramWidth=diagramImage.naturalWidth;diagramHeight=diagramImage.naturalHeight;diagramImage.hidden=false;fitDiagram();};
+  diagramImage.onload=()=>{diagramWidth=diagramImage.naturalWidth;diagramHeight=diagramImage.naturalHeight;diagramImage.hidden=false;fitDiagram(button.dataset.diagram==='secuencia-apuesta'?'width':'all');};
   diagramImage.onerror=()=>{document.querySelector('#viewer-error').hidden=false;};
   diagramImage.src=src;
 }));

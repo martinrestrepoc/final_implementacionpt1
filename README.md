@@ -19,6 +19,7 @@ Es una **propuesta de diseño**: no se implementa nada, se decide y se justifica
 | [`propuesta/decisiones-arquitectura.md`](propuesta/decisiones-arquitectura.md) | Las nueve decisiones obligatorias, seguridad, costos, los tres ADR y la pregunta final. Es el documento principal: todo lo demás sale de aquí |
 | [`propuesta/diagrama-general.md`](propuesta/diagrama-general.md) | Entregable 12.1: el diagrama general, con el detalle de cada flecha |
 | [`propuesta/diagrama-secuencia-apuesta.md`](propuesta/diagrama-secuencia-apuesta.md) | Entregable 12.2: el camino de una apuesta y el caso de los cuatro clics |
+| [`propuesta/diagrama-mensajeria.md`](propuesta/diagrama-mensajeria.md) | Entregable 12.3: el diseño de la mensajería, con Producer, Topic, Partitions, Consumer Groups, Consumers, Exchange, Routing y Queue |
 | [`propuesta/diagramas/`](propuesta/diagramas) | Los archivos Mermaid de los tres dibujos, por si hay que editarlos o exportarlos |
 | [`presentacion/guion.md`](presentacion/guion.md) | Lo que va en cada diapositiva, con las notas del expositor |
 
@@ -33,7 +34,7 @@ Es una **propuesta de diseño**: no se implementa nada, se decide y se justifica
 
 ## Cómo ver los diagramas
 
-Los `.md` de `propuesta/` traen los diagramas escritos en Mermaid y se ven directo en GitHub o en VS Code. Para exportarlos a imagen, se pegan en [mermaid.live](https://mermaid.live). La presentación ya los trae dibujados: el botón **Ampliar diagrama** los abre en grande.
+Los cuatro `.md` de `propuesta/` traen los diagramas escritos en Mermaid y se ven directo en GitHub o en VS Code. Para exportarlos a imagen, se pegan en [mermaid.live](https://mermaid.live). La presentación ya los trae dibujados: el botón **Ampliar diagrama** los abre en grande.
 
 ## La presentación
 
@@ -41,4 +42,4 @@ Se abre con doble clic en [`presentacion/index.html`](presentacion/index.html), 
 
 - **Flechas** o **espacio** para avanzar · **I** para el índice · **F** para pantalla completa.
 - **N** abre las notas del expositor. Conviene ocultarlas antes de proyectar.
-- En las diapositivas 4, 5 y 10, **Ampliar diagrama** abre el diagrama completo, con zoom y descarga.
+- En las diapositivas 4, 5, 9 y 10 hay un botón que abre el diagrama completo, con zoom y descarga.

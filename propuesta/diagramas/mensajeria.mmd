@@ -1,0 +1,78 @@
+%%{init: {'htmlLabels': false, 'flowchart': {'htmlLabels': false, 'wrappingWidth': 280, 'nodeSpacing': 28, 'rankSpacing': 60, 'curve': 'basis'}}}%%
+flowchart TB
+  subgraph K["KAFKA · los hechos del negocio"]
+    direction LR
+    KPROD["Producer<br/>Apuestas"]
+    subgraph KT["Topic · apuestas.aceptadas"]
+      direction TB
+      KP0["Partition 0"]
+      KP1["Partition 1"]
+      KP2["Partition 2"]
+      KPN["Partitions 3 a 23"]
+    end
+    subgraph KG1["Consumer Group · estadisticas"]
+      direction TB
+      KC1["Consumer"]
+      KC2["Consumer"]
+    end
+    subgraph KG2["Consumer Group · auditoria"]
+      direction TB
+      KC3["Consumer"]
+    end
+    subgraph KG3["Consumer Group · cuotas"]
+      direction TB
+      KC4["Consumer"]
+    end
+    subgraph KG4["Consumer Group · notificaciones"]
+      direction TB
+      KC5["Consumer"]
+    end
+    KPROD -->|"la clave carreraId<br/>decide la Partition"| KT
+    KT --> KG1
+    KT --> KG2
+    KT --> KG3
+    KT --> KG4
+  end
+
+  subgraph R["RABBITMQ · las tareas por hacer"]
+    direction LR
+    RP1["Producer<br/>Apuestas"]
+    RE1{{"Exchange · liquidacion<br/>tipo direct"}}
+    RQ1[["Queue<br/>q.liquidacion.lotes"]]
+    RC1["Consumer"]
+    RC2["Consumer"]
+    RQD[["Queue<br/>q.liquidacion.lotes.dlq"]]
+    RP2["Producer<br/>Notificaciones"]
+    RE2{{"Exchange · notificaciones<br/>tipo topic"}}
+    RQ2[["Queue<br/>q.notif.email"]]
+    RQ3[["Queue<br/>q.notif.push"]]
+    RQ4[["Queue<br/>q.notif.inapp"]]
+    RC3["Consumer"]
+    RC4["Consumer"]
+    RC5["Consumer"]
+    RP1 --> RE1
+    RE1 -->|"Routing key<br/>liquidacion.lote"| RQ1
+    RQ1 --> RC1
+    RQ1 --> RC2
+    RQ1 -->|"tras varios intentos"| RQD
+    RP2 --> RE2
+    RE2 -->|"Routing key<br/>notif.email.*"| RQ2
+    RE2 -->|"Routing key<br/>notif.push.*"| RQ3
+    RE2 -->|"Routing key<br/>notif.inapp.*"| RQ4
+    RQ2 --> RC3
+    RQ3 --> RC4
+    RQ4 --> RC5
+  end
+
+  K ~~~ R
+
+  classDef productor fill:#bfdbfe,stroke:#1d4ed8,stroke-width:2px,color:#111827
+  classDef particion fill:#ede9fe,stroke:#7e22ce,stroke-width:1.5px,color:#111827
+  classDef exchange fill:#e9d5ff,stroke:#7e22ce,stroke-width:3px,color:#111827
+  classDef cola fill:#f1e7da,stroke:#8b4a20,stroke-width:2px,color:#111827
+  classDef consumidor fill:#cffafe,stroke:#0e7490,stroke-width:2px,color:#111827
+  class KPROD,RP1,RP2 productor
+  class KP0,KP1,KP2,KPN particion
+  class RE1,RE2 exchange
+  class RQ1,RQ2,RQ3,RQ4,RQD cola
+  class KC1,KC2,KC3,KC4,KC5,RC1,RC2,RC3,RC4,RC5 consumidor

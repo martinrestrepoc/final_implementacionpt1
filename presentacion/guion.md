@@ -161,6 +161,8 @@ Los otros ocho eventos están en la decisión 4 del documento: `CarreraProgramad
 
 Cada grupo lleva su propia posición de lectura.
 
+El botón **Ver el diseño completo** abre el diagrama de [`../propuesta/diagrama-mensajeria.md`](../propuesta/diagrama-mensajeria.md), que es el entregable 12.3: Producer, Topic, Partitions, Consumer Groups y Consumers en Kafka; Producer, Exchange, Routing key, Queue y Consumer en RabbitMQ.
+
 **RabbitMQ — tareas que se reparten y se reintentan**
 
 `Apuestas → exchange liquidacion (direct) → routing key liquidacion.lote → cola q.liquidacion.lotes → varios procesos de pago`

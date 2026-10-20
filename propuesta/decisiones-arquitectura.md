@@ -721,7 +721,7 @@ El enunciado avisa que pedirán un cambio de requisitos y da ese ejemplo. Así l
 
 Vale la pena dibujar también las ramas de **carrera cerrada** y **saldo insuficiente**, y sobre todo la de los **clics 2, 3 y 4**, que terminan en el paso 4 devolviendo la misma apuesta, sin descontar de nuevo. Ese es el corazón del ejercicio.
 
-**Diagrama de mensajería** (entregable 12.3):
+**Diagrama de mensajería** (entregable 12.3, dibujado en [`diagrama-mensajeria.md`](diagrama-mensajeria.md)):
 
 - **Kafka:** quién publica, en qué topic, con cuántas particiones y qué grupos de consumidores lo leen. Los topics son `apuestas.aceptadas`, `apuestas.rechazadas`, `billetera.movimientos`, `carreras.eventos`, `carreras.resultados`, `premios.eventos`, `cuotas.estimadas` y `usuarios.eventos`. La clave es `carreraId`, salvo en los movimientos de billetera y los eventos de usuario, donde es `usuarioId`. Cada grupo de consumidores (estadísticas, auditoría, cuotas, notificaciones y los demás) lleva su propia posición de lectura.
 - **RabbitMQ:** productor, exchange, routing key, cola y consumidores, con la cola de mensajes con problemas. Son los tres de la tabla de la decisión 4.
