@@ -1,0 +1,40 @@
+- generic [active] [ref=e1]:
+  - link "Ir a la presentación" [ref=e2] [cursor=pointer]:
+    - /url: "#presentation"
+  - banner [ref=e3]:
+    - generic [ref=e4]: medianos.
+    - generic [ref=e5]: La Gran Liga de Apuestas · EIA
+    - button "Índice I" [ref=e6] [cursor=pointer]
+  - main [ref=e7]:
+    - region "1 de 20" [ref=e10]:
+      - generic [ref=e11]:
+        - generic [ref=e12]:
+          - generic [ref=e13]:
+            - heading [level=1] [ref=e14]:
+              - text: La Gran Liga de Apuestas de
+              - emphasis [ref=e15]: Medianos EIA.
+            - paragraph [ref=e16]: Una arquitectura para confirmar cada apuesta y proteger cada EIA Coin.
+            - paragraph [ref=e17]: Salchipapa Maker Racing S.A.S.Propuesta de arquitectura · Arquitectura de Software, EIA
+          - generic [ref=e18]:
+            - heading "El escenario de la final" [level=2] [ref=e19]
+            - generic [ref=e20]:
+              - generic [ref=e21]:
+                - term [ref=e22]: "100.000"
+                - definition [ref=e23]: usuarios conectados
+              - generic [ref=e24]:
+                - term [ref=e25]: 10.000 / s
+                - definition [ref=e26]: apuestas en los últimos 30 segundos
+              - generic [ref=e27]:
+                - term [ref=e28]: < 1 segundo
+                - definition [ref=e29]: para confirmar la aceptación
+            - paragraph [ref=e30]: Requisitos de diseño. Capacidad pendiente de validar con carga real.
+        - paragraph [ref=e31]: Ninguna apuesta aceptada ni movimiento de billetera puede perderse.
+  - contentinfo [ref=e32]:
+    - generic [ref=e33]:
+      - generic [ref=e34]: Arquitectura
+      - button "Notas N" [ref=e35] [cursor=pointer]
+    - navigation "Diapositivas" [ref=e36]:
+      - button "Diapositiva anterior" [disabled] [ref=e37]: ←
+      - generic [ref=e38]: 01 / 20
+      - button "Diapositiva siguiente" [ref=e39] [cursor=pointer]: →
+    - button "Pantalla completa F" [ref=e40] [cursor=pointer]

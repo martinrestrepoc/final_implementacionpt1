@@ -1,0 +1,208 @@
+{
+  "version": 1,
+  "historyId": "56ede7c2-78d8-40af-9686-734af7ad0c03",
+  "currentRevision": "ccc00e83-02ed-49fc-84cc-a3f90217b431",
+  "pendingChanges": false,
+  "files": {
+    "AGENTS.md": {
+      "hash": "1d4f0c8ca2507b94fd7c9df709fff01416adbd51a0f922b9d6ed2f40129147d5",
+      "content": "/Users/martinrestrepocoral/.cache/hyperframes/history/56ede7c2-78d8-40af-9686-734af7ad0c03/blobs/1d/1d4f0c8ca2507b94fd7c9df709fff01416adbd51a0f922b9d6ed2f40129147d5"
+    },
+    "CLAUDE.md": {
+      "hash": "1d4f0c8ca2507b94fd7c9df709fff01416adbd51a0f922b9d6ed2f40129147d5",
+      "content": "/Users/martinrestrepocoral/.cache/hyperframes/history/56ede7c2-78d8-40af-9686-734af7ad0c03/blobs/1d/1d4f0c8ca2507b94fd7c9df709fff01416adbd51a0f922b9d6ed2f40129147d5"
+    },
+    "assets/gsap.min.js": {
+      "hash": "c174bfce53a729418d57a8ad8625e7247c793a22fef8e2851e3cfa3de9cd8280",
+      "content": "/Users/martinrestrepocoral/.cache/hyperframes/history/56ede7c2-78d8-40af-9686-734af7ad0c03/blobs/c1/c174bfce53a729418d57a8ad8625e7247c793a22fef8e2851e3cfa3de9cd8280"
+    },
+    "assets/work-sans-400.ttf": {
+      "hash": "a131e7022b34ef1950a9d6bdda16f5d4509cc1fe1af5991a4552febd2a4027e5",
+      "content": "/Users/martinrestrepocoral/.cache/hyperframes/history/56ede7c2-78d8-40af-9686-734af7ad0c03/blobs/a1/a131e7022b34ef1950a9d6bdda16f5d4509cc1fe1af5991a4552febd2a4027e5"
+    },
+    "assets/work-sans-500.ttf": {
+      "hash": "caf10fc6636298661234c70bfd5c806835ea65a3b594b5fb3899bf164286f2ff",
+      "content": "/Users/martinrestrepocoral/.cache/hyperframes/history/56ede7c2-78d8-40af-9686-734af7ad0c03/blobs/ca/caf10fc6636298661234c70bfd5c806835ea65a3b594b5fb3899bf164286f2ff"
+    },
+    "assets/work-sans-600.ttf": {
+      "hash": "4bcd994d0502df7c45f2e3c3c95411e92a3cb240fa0167bd2bd74abaae0dcb56",
+      "content": "/Users/martinrestrepocoral/.cache/hyperframes/history/56ede7c2-78d8-40af-9686-734af7ad0c03/blobs/4b/4bcd994d0502df7c45f2e3c3c95411e92a3cb240fa0167bd2bd74abaae0dcb56"
+    },
+    "assets/work-sans-700.ttf": {
+      "hash": "e8398b22225a1f971df9bb12fa8fb9dd4c76e80aa4d67d45bde60ebbc6c5ad81",
+      "content": "/Users/martinrestrepocoral/.cache/hyperframes/history/56ede7c2-78d8-40af-9686-734af7ad0c03/blobs/e8/e8398b22225a1f971df9bb12fa8fb9dd4c76e80aa4d67d45bde60ebbc6c5ad81"
+    },
+    "contenido.json": {
+      "hash": "6eaab18d176d5758301b5ef0b1db888dd13e79d7168430c66d0147818d8c8003",
+      "content": "/Users/martinrestrepocoral/.cache/hyperframes/history/56ede7c2-78d8-40af-9686-734af7ad0c03/blobs/6e/6eaab18d176d5758301b5ef0b1db888dd13e79d7168430c66d0147818d8c8003"
+    },
+    "hyperframes.json": {
+      "hash": "53dbce1e19aa713cbb12ee0bc4d206143b45ab15e6ffbfcaa8f69572d4d24d50",
+      "content": "/Users/martinrestrepocoral/.cache/hyperframes/history/56ede7c2-78d8-40af-9686-734af7ad0c03/blobs/53/53dbce1e19aa713cbb12ee0bc4d206143b45ab15e6ffbfcaa8f69572d4d24d50"
+    },
+    "index.html": {
+      "hash": "006ce58225306174ee3076f2b73a8f6964b6603fc3beb114e2c1df8b3574be71",
+      "content": "/Users/martinrestrepocoral/.cache/hyperframes/history/56ede7c2-78d8-40af-9686-734af7ad0c03/blobs/00/006ce58225306174ee3076f2b73a8f6964b6603fc3beb114e2c1df8b3574be71"
+    },
+    "meta.json": {
+      "hash": "e2373a213188f644fc9bfc54ee6797c668e43393ae571bf1d6bc059b8f295a48",
+      "content": "/Users/martinrestrepocoral/.cache/hyperframes/history/56ede7c2-78d8-40af-9686-734af7ad0c03/blobs/e2/e2373a213188f644fc9bfc54ee6797c668e43393ae571bf1d6bc059b8f295a48"
+    },
+    "package.json": {
+      "hash": "fca3483a9d3b510dee6760ecc54287b6cd0d405d9b8b02a05449f8c1a90ad860",
+      "content": "/Users/martinrestrepocoral/.cache/hyperframes/history/56ede7c2-78d8-40af-9686-734af7ad0c03/blobs/fc/fca3483a9d3b510dee6760ecc54287b6cd0d405d9b8b02a05449f8c1a90ad860"
+    },
+    "presentation.js": {
+      "hash": "31ecb2c98b5bd2d19ce5ba920bb80500facf33e99cae840cfe69120d45ad4951",
+      "content": "/Users/martinrestrepocoral/.cache/hyperframes/history/56ede7c2-78d8-40af-9686-734af7ad0c03/blobs/31/31ecb2c98b5bd2d19ce5ba920bb80500facf33e99cae840cfe69120d45ad4951"
+    },
+    "styles.css": {
+      "hash": "c3046101e3e58fee8dec49be6787686e8c6f04625ebb19f7e03a724f539a524f",
+      "content": "/Users/martinrestrepocoral/.cache/hyperframes/history/56ede7c2-78d8-40af-9686-734af7ad0c03/blobs/c3/c3046101e3e58fee8dec49be6787686e8c6f04625ebb19f7e03a724f539a524f"
+    }
+  },
+  "revisions": {
+    "ec6d6eee-ced1-47fd-b32d-924e5d17b852": {
+      "actor": {
+        "kind": "outside",
+        "name": "Outside"
+      },
+      "label": "Changed outside the app",
+      "startedAt": 1792511995665,
+      "endedAt": 1792511995671,
+      "files": {
+        "index.html": {
+          "before": "/Users/martinrestrepocoral/.cache/hyperframes/history/56ede7c2-78d8-40af-9686-734af7ad0c03/blobs/57/57a214e9fa4d18c1462d61f4233135f8ec6a719af137c19d2e4a100b1a79dc47",
+          "after": "/Users/martinrestrepocoral/.cache/hyperframes/history/56ede7c2-78d8-40af-9686-734af7ad0c03/blobs/86/86ee7410436fc1d14fe0087fe1a924861bfd0f2d392ccdd55c9a3b91f3d365ff"
+        },
+        "presentation.js": {
+          "before": "/Users/martinrestrepocoral/.cache/hyperframes/history/56ede7c2-78d8-40af-9686-734af7ad0c03/blobs/37/37c97f5abcb4d40220693196c3e31672c2db1e6228a9f3c8fb871809b58f6f72",
+          "after": "/Users/martinrestrepocoral/.cache/hyperframes/history/56ede7c2-78d8-40af-9686-734af7ad0c03/blobs/30/308666f6e2b62a29c8f6b14d9472f9828332b1d2fcc67b6008bfef2758ae9b6d"
+        },
+        "styles.css": {
+          "before": "/Users/martinrestrepocoral/.cache/hyperframes/history/56ede7c2-78d8-40af-9686-734af7ad0c03/blobs/c6/c6b406a0c2ce740961e1a34629a91b94ec19ebced5f7124cfdf88859efd50dca",
+          "after": "/Users/martinrestrepocoral/.cache/hyperframes/history/56ede7c2-78d8-40af-9686-734af7ad0c03/blobs/c3/c3046101e3e58fee8dec49be6787686e8c6f04625ebb19f7e03a724f539a524f"
+        }
+      }
+    },
+    "ccc00e83-02ed-49fc-84cc-a3f90217b431": {
+      "actor": {
+        "kind": "outside",
+        "name": "Outside"
+      },
+      "label": "Changed outside the app",
+      "startedAt": 1792512039134,
+      "endedAt": 1792512039139,
+      "files": {
+        "index.html": {
+          "before": "/Users/martinrestrepocoral/.cache/hyperframes/history/56ede7c2-78d8-40af-9686-734af7ad0c03/blobs/86/86ee7410436fc1d14fe0087fe1a924861bfd0f2d392ccdd55c9a3b91f3d365ff",
+          "after": "/Users/martinrestrepocoral/.cache/hyperframes/history/56ede7c2-78d8-40af-9686-734af7ad0c03/blobs/00/006ce58225306174ee3076f2b73a8f6964b6603fc3beb114e2c1df8b3574be71"
+        },
+        "presentation.js": {
+          "before": "/Users/martinrestrepocoral/.cache/hyperframes/history/56ede7c2-78d8-40af-9686-734af7ad0c03/blobs/30/308666f6e2b62a29c8f6b14d9472f9828332b1d2fcc67b6008bfef2758ae9b6d",
+          "after": "/Users/martinrestrepocoral/.cache/hyperframes/history/56ede7c2-78d8-40af-9686-734af7ad0c03/blobs/31/31ecb2c98b5bd2d19ce5ba920bb80500facf33e99cae840cfe69120d45ad4951"
+        }
+      }
+    }
+  },
+  "checks": {
+    "latest": {
+      "revision": "ccc00e83-02ed-49fc-84cc-a3f90217b431",
+      "id": "d874d45a-44c4-45cc-8c8d-1f7d43e15364"
+    },
+    "revisions": {
+      "ec6d6eee-ced1-47fd-b32d-924e5d17b852": [
+        {
+          "id": "f374a135-e924-436e-a9ac-0036db5ef66b",
+          "scope": "project",
+          "report": "/Users/martinrestrepocoral/Desktop/Implementación/final pt1/outputs/presentacion/.hyperframes/artifacts/checks/f374a135-e924-436e-a9ac-0036db5ef66b.json",
+          "metadata": {
+            "ok": false,
+            "browserSkipped": false,
+            "options": {
+              "samples": 9,
+              "atTransitions": false,
+              "maxIssues": 80,
+              "collapseStatic": true,
+              "tolerance": 2,
+              "timeout": 3000,
+              "contrast": true,
+              "strict": false,
+              "snapshots": false,
+              "browserGpuMode": "auto"
+            }
+          },
+          "createdAt": 1792511998739,
+          "contentHash": "32cb863dd4f939611a6a3daf78c522fec5eca1325f7f23a5148eaa1306905bec",
+          "revision": "ec6d6eee-ced1-47fd-b32d-924e5d17b852",
+          "inputFingerprint": "ecd9401c60fd6ece18d282852ece79d44f7df91d31ee17ba0bfa9ef689ca99e5",
+          "inputScope": "local-project-files",
+          "attribution": "recorded-revision"
+        }
+      ],
+      "ccc00e83-02ed-49fc-84cc-a3f90217b431": [
+        {
+          "id": "d874d45a-44c4-45cc-8c8d-1f7d43e15364",
+          "scope": "project",
+          "report": "/Users/martinrestrepocoral/Desktop/Implementación/final pt1/outputs/presentacion/.hyperframes/artifacts/checks/d874d45a-44c4-45cc-8c8d-1f7d43e15364.json",
+          "metadata": {
+            "ok": true,
+            "browserSkipped": false,
+            "options": {
+              "samples": 9,
+              "atTransitions": false,
+              "maxIssues": 80,
+              "collapseStatic": true,
+              "tolerance": 2,
+              "timeout": 3000,
+              "contrast": true,
+              "strict": false,
+              "snapshots": false,
+              "browserGpuMode": "auto"
+            }
+          },
+          "createdAt": 1792512041513,
+          "contentHash": "60540c0dbea2e27b4bd37c3019040edd4c12204800040bf5bdcbadd80ccf63e4",
+          "revision": "ccc00e83-02ed-49fc-84cc-a3f90217b431",
+          "inputFingerprint": "4176a49da16336d44d4ad5db43ce22318426f961e5226029516b3fe79ed5def4",
+          "inputScope": "local-project-files",
+          "attribution": "recorded-revision"
+        }
+      ]
+    },
+    "unversioned": [
+      {
+        "id": "6c758381-ebe6-42b2-9c40-1a489b046554",
+        "scope": "project",
+        "report": "/Users/martinrestrepocoral/Desktop/Implementación/final pt1/outputs/presentacion/.hyperframes/artifacts/checks/6c758381-ebe6-42b2-9c40-1a489b046554.json",
+        "metadata": {
+          "ok": false,
+          "browserSkipped": true,
+          "options": {
+            "samples": 9,
+            "atTransitions": false,
+            "maxIssues": 80,
+            "collapseStatic": true,
+            "tolerance": 2,
+            "timeout": 3000,
+            "contrast": true,
+            "strict": false,
+            "snapshots": false,
+            "browserGpuMode": "auto"
+          }
+        },
+        "createdAt": 1792511851923,
+        "contentHash": "17c26272a0a4b2c071bb640766754f3e8af931c42e646acb604e2e523c07950b",
+        "revision": null,
+        "inputFingerprint": "8c2ce9df5a195236cefbe753c7c64d5fe2e5d4b1aaefcfb5e981df5c05535cdc",
+        "inputScope": "local-project-files",
+        "attribution": "unversioned"
+      }
+    ]
+  },
+  "snapshots": {
+    "latest": null,
+    "revisions": {},
+    "unversioned": []
+  }
+}

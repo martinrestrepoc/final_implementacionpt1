@@ -1,0 +1,166 @@
+{
+  "ok": false,
+  "strict": false,
+  "browserSkipped": false,
+  "lint": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 0,
+    "infoCount": 0,
+    "findings": [],
+    "filesScanned": 1
+  },
+  "runtime": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 0,
+    "infoCount": 0,
+    "findings": []
+  },
+  "layout": {
+    "ok": false,
+    "errorCount": 1,
+    "warningCount": 0,
+    "infoCount": 1,
+    "findings": [
+      {
+        "code": "sweep_static",
+        "severity": "error",
+        "time": 0,
+        "selector": "[data-composition-id]",
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "rect": {
+          "left": 0,
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "width": 0,
+          "height": 0
+        },
+        "message": "Timeline did not advance under seek; every green verdict on this run is unreliable.",
+        "fixHint": "An animation on the page never moved under seek. Build it on the paused GSAP timeline registered in `window.__timelines[compositionId]`, or as a CSS animation, so the seek drives it.",
+        "firstSeen": 0,
+        "lastSeen": 0,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          0
+        ]
+      },
+      {
+        "code": "canvas_overflow",
+        "severity": "info",
+        "time": 11.111,
+        "selector": "a.skip",
+        "message": "Text extends outside the composition canvas.",
+        "rect": {
+          "left": 31,
+          "top": -84,
+          "right": 181.17,
+          "bottom": -65,
+          "width": 150.17,
+          "height": 19
+        },
+        "containerSelector": "[data-composition-id=\"medianos-eia\"]",
+        "text": "Ir a la presentación",
+        "fixHint": "Move the text inward, reduce its size, or mark intentional off-canvas animation with data-layout-allow-overflow.",
+        "containerRect": {
+          "left": 0,
+          "top": 0,
+          "right": 1600,
+          "bottom": 900,
+          "width": 1600,
+          "height": 900
+        },
+        "overflow": {
+          "top": 84
+        },
+        "dataAttributes": {
+          "data-hf-svg-reference-aliases": "[{\"name\":\"href\",\"localName\":\"href\",\"namespaceURI\":null,\"before\":\"#presentation\",\"after\":\"#presentation\"}]"
+        },
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 31,
+          "y": -84,
+          "width": 150.17,
+          "height": 19
+        },
+        "firstSeen": 11.111,
+        "lastSeen": 188.889,
+        "occurrences": 9,
+        "heldMs": 0,
+        "times": [
+          11.111,
+          33.333,
+          55.556,
+          77.778,
+          100,
+          122.222,
+          144.444,
+          166.667,
+          188.889
+        ]
+      }
+    ],
+    "duration": 200,
+    "samples": [
+      11.111,
+      33.333,
+      55.556,
+      77.778,
+      100,
+      122.222,
+      144.444,
+      166.667,
+      188.889
+    ],
+    "transitionSamples": [],
+    "transitionSamplesDropped": 0,
+    "tolerance": 2,
+    "totalIssueCount": 2,
+    "truncated": false
+  },
+  "motion": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 0,
+    "infoCount": 0,
+    "findings": [],
+    "enabled": false,
+    "samples": 0
+  },
+  "contrast": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 0,
+    "infoCount": 0,
+    "findings": [],
+    "enabled": true,
+    "samples": [
+      11.111,
+      55.556,
+      100,
+      144.444,
+      188.889
+    ],
+    "checked": 125,
+    "passed": 125
+  },
+  "hdr": {
+    "autoPromotion": null,
+    "inspection": "available"
+  },
+  "snapshots": {
+    "enabled": false,
+    "files": [],
+    "times": [],
+    "findingFiles": []
+  }
+}
