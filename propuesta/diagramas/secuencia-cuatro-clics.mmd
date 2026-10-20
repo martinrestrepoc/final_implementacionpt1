@@ -1,0 +1,34 @@
+sequenceDiagram
+    autonumber
+    actor USR as Usuario
+    participant APP as App
+    participant GW as API Gateway
+    participant APU as Apuestas
+    participant BD as Base de Apuestas
+    participant KAF as Kafka
+
+    Note over APP: Clave de la operación: K, generada al abrir el formulario.<br/>Saldo antes de apostar: 5.000 EIA Coins. Apuesta: 500
+
+    USR->>APP: Clic 1 en APOSTAR
+    APP->>GW: La apuesta, con la clave K
+    GW->>APU: Crear la apuesta
+    APU->>BD: En un solo paso: descuenta 500, guarda la apuesta con la clave K,<br/>el movimiento de la billetera y los eventos
+    BD-->>APU: Guardada la apuesta A1. Saldo: 4.500
+    APU-->>GW: Aceptada: A1
+    GW-->>APP: Aceptada: A1, saldo 4.500
+
+    loop La respuesta tarda y el usuario insiste: clics 2, 3 y 4, con la misma clave K
+        USR->>APP: Clic en APOSTAR
+        APP->>GW: La apuesta, con la clave K
+        GW->>APU: Crear la apuesta
+        APU->>BD: ¿La clave K ya fue atendida?
+        BD-->>APU: Sí: la apuesta A1
+        APU-->>GW: La misma apuesta A1, sin descontar otra vez
+        GW-->>APP: Aceptada: A1, saldo 4.500
+    end
+
+    APP->>USR: Una sola apuesta en pantalla, y el saldo en 4.500
+    Note over USR,BD: Resultado: una apuesta, un movimiento, 500 EIA Coins descontados una vez.<br/>Si dos clics llegan al mismo tiempo, la base de datos atiende uno<br/>y al otro no le deja repetir la clave: le devuelve la apuesta ya creada
+
+    APU-->>KAF: ApuestaAceptada se publica una sola vez
+    Note over KAF: Y si llegara repetido, cada consumidor lo descarta porque reconoce<br/>el identificador del evento: un solo aviso, un solo registro de auditoría

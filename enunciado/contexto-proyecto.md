@@ -1,6 +1,6 @@
 # Trabajo de Arquitectura de Software — La Gran Liga de Apuestas de Medianos EIA
 
-> Documento de contexto generado a partir de `final pt1.pdf`, para consulta legible por IA y por el equipo. Contiene **todos los detalles** del enunciado original: historia/contexto, reglas de negocio, capacidades del sistema, supuestos de diseño, decisiones obligatorias, entregables, criterios de evaluación y restricciones.
+> Documento de contexto generado a partir de `final-pt1.pdf`, para consulta legible por IA y por el equipo. Contiene **todos los detalles** del enunciado original: historia/contexto, reglas de negocio, capacidades del sistema, supuestos de diseño, decisiones obligatorias, entregables, criterios de evaluación y restricciones.
 
 ---
 

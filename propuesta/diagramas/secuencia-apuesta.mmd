@@ -1,0 +1,47 @@
+sequenceDiagram
+    autonumber
+    actor USR as Usuario
+    participant APP as App web o móvil
+    participant GW as API Gateway
+    participant APU as Apuestas
+    participant BD as Base de Apuestas
+    participant KAF as Kafka
+    participant CON as Notificaciones · Cuotas · Estadísticas · Auditoría
+
+    USR->>APP: Abre el formulario de la apuesta
+    Note over APP: Aquí la app genera la clave de la operación.<br/>Todos los clics que vengan después usan esa misma clave
+    USR->>APP: Pulsa APOSTAR
+    APP->>GW: La apuesta: carrera, mediano y monto,<br/>con su JWT y la clave de la operación
+    Note over GW: Verifica el JWT sin preguntarle a Usuarios<br/>y comprueba el límite de peticiones del usuario
+    GW->>APU: Crear la apuesta
+    APU->>BD: ¿Esta clave ya fue atendida antes?
+
+    alt La clave ya existe
+        BD-->>APU: Sí, y esta fue la respuesta que se dio
+        APU-->>GW: La misma apuesta de antes, sin descontar otra vez
+        GW-->>APP: Apuesta aceptada: la original
+        APP->>USR: La apuesta que ya tenía, con el mismo saldo
+    else Es la primera vez que llega esta clave
+        Note over APU,BD: Lo que sigue va en un solo paso:<br/>o queda todo guardado, o no queda nada
+        APU->>BD: 1 · ¿La carrera está abierta, falta para la hora de cierre<br/>y el mediano participa? Lo mira en su propia copia
+        Note over BD: La hora la pone el reloj de la base de datos.<br/>Un solo reloj para todas las copias del servicio
+        APU->>BD: 2 · Descuenta el monto, solo si el saldo alcanza
+        APU->>BD: 3 · Guarda la apuesta con su clave, el movimiento<br/>de la billetera y los eventos en la tabla de salida
+
+        alt La carrera ya cerró, el mediano no participa o el saldo no alcanza
+            BD-->>APU: No queda nada guardado
+            APU-->>GW: Apuesta rechazada, con el motivo
+            GW-->>APP: Rechazo. El saldo quedó intacto
+            APP->>USR: "No se pudo apostar" y el motivo
+            APU-->>KAF: ApuestaRechazada
+        else Todo está en orden
+            BD-->>APU: Guardado: apuesta, movimiento y eventos, juntos
+            APU-->>GW: Apuesta aceptada y saldo que quedó
+            GW-->>APP: Apuesta aceptada
+            APP->>USR: "Tu apuesta quedó registrada" y el saldo nuevo
+        end
+    end
+
+    Note over APU,CON: Aquí ya terminó lo que el usuario espera en pantalla.<br/>Todo lo que sigue pasa después y nadie lo espera:<br/>si Kafka o cualquier consumidor se cae, la apuesta ya está aceptada
+    APU-->>KAF: ApuestaAceptada y MovimientoBilleteraRegistrado,<br/>publicados desde la tabla de salida
+    KAF-->>CON: Cada uno lee a su ritmo lo que le toca: el aviso al apostador,<br/>la cuota estimada, las estadísticas y el registro de auditoría

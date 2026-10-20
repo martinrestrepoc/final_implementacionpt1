@@ -1,0 +1,96 @@
+%%{init: {'htmlLabels': false, 'flowchart': {'htmlLabels': false, 'nodeSpacing': 30, 'rankSpacing': 70, 'curve': 'basis'}}}%%
+flowchart LR
+  subgraph Z1["QUIENES USAN<br/>LA PLATAFORMA"]
+    direction TB
+    APO["Apostadores<br/>app y web"]
+    OPE["Operador<br/>Administrador<br/>Auditor"]
+  end
+
+  subgraph Z2["ZONA PUBLICA"]
+    direction TB
+    GW["API GATEWAY<br/>verifica el JWT<br/>limita peticiones<br/>manda las cuotas<br/>en vivo a las apps"]
+  end
+
+  subgraph Z3["RED PRIVADA · SERVICIOS"]
+    direction TB
+    USU["USUARIOS<br/>registro · sesion<br/>roles · bloqueos"]
+    APU["APUESTAS<br/>apuestas + billetera<br/>+ premios"]
+    CAR["CARRERAS<br/>carreras · medianos<br/>resultados oficiales"]
+  end
+
+  subgraph Z4["RED PRIVADA · BASES DE DATOS"]
+    direction TB
+    BDA[("Base de Apuestas<br/>dedicada")]
+    BDC[("Base compartida,<br/>separada por servicio<br/>usuarios · carreras<br/>notificaciones")]
+  end
+
+  subgraph Z5["RED PRIVADA<br/>MENSAJERIA"]
+    direction TB
+    KAF{{"KAFKA<br/>hechos del negocio"}}
+    RAB{{"RABBITMQ<br/>tareas por hacer"}}
+  end
+
+  subgraph Z6["RED PRIVADA · CONSUMIDORES<br/>fuera de la respuesta al usuario"]
+    direction TB
+    PRE["PAGO DE PREMIOS<br/>por lotes · parte de Apuestas<br/>acredita en la base de Apuestas"]
+    CUO["CALCULO DE CUOTAS"]
+    NOT["NOTIFICACIONES"]
+    EST["ESTADISTICAS<br/>reportes y fraude"]
+    AUD["AUDITORIA"]
+  end
+
+  subgraph Z7["GUARDADO<br/>A LARGO PLAZO"]
+    direction TB
+    HIS[("Historico<br/>y reportes")]
+    REG[("Registro de auditoria<br/>5 anos · no se modifica")]
+  end
+
+  EXT["Correo y push<br/>proveedores externos"]
+
+  APO --> GW
+  OPE --> GW
+  GW -->|"apostar y<br/>consultar saldo"| APU
+  GW -->|"carreras y medianos"| CAR
+  GW -->|"registro y sesion"| USU
+  GW -->|"reportes premium"| EST
+  GW -->|"consulta del auditor"| AUD
+
+  APU -->|"apuesta + descuento + movimiento,<br/>todo junto o nada"| BDA
+  USU --> BDC
+  CAR --> BDC
+
+  APU <-.->|"publica ApuestaAceptada y los movimientos<br/>recibe CarreraAbierta con la hora de cierre"| KAF
+  CAR <-.->|"publica los eventos de carrera y el resultado<br/>recibe LiquidacionFinalizada"| KAF
+  USU -.->|"eventos de usuario"| KAF
+  APU ==>|"LiquidarLote"| RAB
+
+  KAF -.->|"ResultadoPublicado"| PRE
+  KAF <-.->|"lee las apuestas,<br/>publica las cuotas"| CUO
+  KAF -.-> NOT
+  KAF -.->|"todos los eventos"| EST
+  KAF -.->|"todos los eventos"| AUD
+  KAF -.->|"cuotas y estado<br/>de la carrera"| GW
+  KAF -.->|"copia continua"| HIS
+  RAB ==>|"lotes repartidos entre<br/>los procesos libres"| PRE
+  NOT <==>|"EnviarNotificacion<br/>una cola por canal, con reintentos"| RAB
+
+  EST --> HIS
+  AUD --> REG
+  NOT --> EXT
+
+  classDef gente fill:#ffffff,stroke:#374151,stroke-width:2px,color:#111827
+  classDef publico fill:#fde68a,stroke:#b45309,stroke-width:2px,color:#111827
+  classDef servicio fill:#bfdbfe,stroke:#1d4ed8,stroke-width:2px,color:#111827
+  classDef dinero fill:#fecaca,stroke:#b91c1c,stroke-width:4px,color:#111827
+  classDef datos fill:#d1fae5,stroke:#047857,stroke-width:2px,color:#111827
+  classDef cola fill:#e9d5ff,stroke:#7e22ce,stroke-width:3px,color:#111827
+  classDef consumidor fill:#cffafe,stroke:#0e7490,stroke-width:2px,color:#111827
+  classDef externo fill:#e5e7eb,stroke:#6b7280,stroke-width:2px,color:#111827
+  class APO,OPE gente
+  class GW publico
+  class USU,CAR servicio
+  class APU,PRE dinero
+  class BDA,BDC,HIS,REG datos
+  class KAF,RAB cola
+  class CUO,NOT,EST,AUD consumidor
+  class EXT externo
