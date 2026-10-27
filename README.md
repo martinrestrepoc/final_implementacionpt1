@@ -1,6 +1,6 @@
 # La Gran Liga de Apuestas de Medianos EIA
 
-Trabajo de Arquitectura de Software. **Salchipapa Maker Racing S.A.S.** nos contrata como arquitectos para diseñar la plataforma de apuestas de carreras de medianos.
+Trabajo de Implementación e integración de software. **Salchipapa Maker Racing S.A.S.** nos contrata como arquitectos para diseñar la plataforma de apuestas de carreras de medianos.
 
 Es una **propuesta de diseño**: no se implementa nada, se decide y se justifica.
 

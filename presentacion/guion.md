@@ -8,7 +8,7 @@ Todo sale de [`../propuesta/decisiones-arquitectura.md`](../propuesta/decisiones
 
 ---
 
-## 1 · Portada
+## 1 · La Gran Liga de Apuestas de Medianos EIA
 
 **En pantalla**
 
@@ -24,7 +24,7 @@ Salchipapa Maker Racing S.A.S. · Propuesta de arquitectura · Integrantes
 
 ---
 
-## 2 · Qué arquitectura elegimos
+## 2 · Arquitectura híbrida
 
 **En pantalla**
 
@@ -41,7 +41,7 @@ Salchipapa Maker Racing S.A.S. · Propuesta de arquitectura · Integrantes
 
 ---
 
-## 3 · Los seis servicios
+## 3 · Servicios y responsabilidades
 
 **En pantalla**
 
@@ -60,7 +60,7 @@ Salchipapa Maker Racing S.A.S. · Propuesta de arquitectura · Integrantes
 
 ---
 
-## 4 · Diagrama general
+## 4 · Diagrama general de arquitectura
 
 **En pantalla**
 
@@ -76,7 +76,7 @@ El diagrama de [`../propuesta/diagrama-general.md`](../propuesta/diagrama-genera
 
 ---
 
-## 5 · Qué pasa cuando alguien aprieta APOSTAR
+## 5 · Secuencia de creación de una apuesta
 
 **En pantalla**
 
@@ -94,7 +94,7 @@ El primer dibujo de [`../propuesta/diagrama-secuencia-apuesta.md`](../propuesta/
 
 ---
 
-## 6 · Comunicación síncrona: apostar y entrar
+## 6 · Comunicación síncrona: apuestas y acceso
 
 **En pantalla**
 
@@ -110,7 +110,7 @@ El primer dibujo de [`../propuesta/diagrama-secuencia-apuesta.md`](../propuesta/
 
 ---
 
-## 7 · Comunicación síncrona: consultar y administrar
+## 7 · Comunicación síncrona: consultas y administración
 
 **En pantalla**
 
@@ -127,7 +127,7 @@ El primer dibujo de [`../propuesta/diagrama-secuencia-apuesta.md`](../propuesta/
 
 ---
 
-## 8 · Los eventos
+## 8 · Comunicación asíncrona: eventos en Kafka
 
 **En pantalla**
 
@@ -151,7 +151,7 @@ Los otros ocho eventos están en la decisión 4 del documento: `CarreraProgramad
 
 ---
 
-## 9 · Cómo quedan Kafka y RabbitMQ
+## 9 · Mensajería asíncrona: Kafka y RabbitMQ
 
 **En pantalla**
 
@@ -175,7 +175,7 @@ Para notificaciones el exchange es `notificaciones`, de tipo topic, con `notif.e
 
 ---
 
-## 10 · Cuatro clics, una apuesta
+## 10 · Idempotencia: una apuesta, un solo cobro
 
 **En pantalla**
 
@@ -194,7 +194,7 @@ El segundo dibujo de [`../propuesta/diagrama-secuencia-apuesta.md`](../propuesta
 
 ---
 
-## 11 · Datos y consistencia
+## 11 · Datos y modelos de consistencia
 
 **En pantalla**
 
@@ -212,7 +212,7 @@ El segundo dibujo de [`../propuesta/diagrama-secuencia-apuesta.md`](../propuesta
 
 ---
 
-## 12 · Los últimos 30 segundos
+## 12 · Escalabilidad para el pico de apuestas
 
 **En pantalla**
 
@@ -228,7 +228,7 @@ El segundo dibujo de [`../propuesta/diagrama-secuencia-apuesta.md`](../propuesta
 
 ---
 
-## 13 · Seguridad
+## 13 · Seguridad y control de acceso
 
 **En pantalla**
 
@@ -248,7 +248,7 @@ El segundo dibujo de [`../propuesta/diagrama-secuencia-apuesta.md`](../propuesta
 
 ---
 
-## 14 · Costos
+## 14 · Costos y escalado según la demanda
 
 **En pantalla**
 
@@ -265,7 +265,7 @@ El segundo dibujo de [`../propuesta/diagrama-secuencia-apuesta.md`](../propuesta
 
 ---
 
-## 15 · Qué pasa cuando algo se cae
+## 15 · Manejo de fallos y recuperación
 
 **En pantalla**
 
@@ -302,7 +302,7 @@ El segundo dibujo de [`../propuesta/diagrama-secuencia-apuesta.md`](../propuesta
 
 ---
 
-## 17 · ADR-002 · La apuesta y el descuento, en un solo paso
+## 17 · ADR-002 · Transacción de apuesta y saldo
 
 **En pantalla**
 
@@ -320,7 +320,7 @@ El segundo dibujo de [`../propuesta/diagrama-secuencia-apuesta.md`](../propuesta
 
 ---
 
-## 18 · ADR-003 · Kafka para los hechos, RabbitMQ para las tareas
+## 18 · ADR-003 · Mensajería con Kafka y RabbitMQ
 
 **En pantalla**
 
@@ -338,7 +338,7 @@ El segundo dibujo de [`../propuesta/diagrama-secuencia-apuesta.md`](../propuesta
 
 ---
 
-## 19 · Qué haríamos hoy y cómo creceríamos cien veces
+## 19 · Evolución para multiplicar la capacidad por 100
 
 **En pantalla**
 
@@ -357,7 +357,7 @@ Conectar con los siete criterios que pide el enunciado: complejidad, escalabilid
 
 ---
 
-## 20 · Conclusiones
+## 20 · Conclusiones de la arquitectura
 
 **En pantalla**
 
